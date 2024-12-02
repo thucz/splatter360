@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ```
 
 ## Acquiring Datasets
-TODO: HM3D and Replica
+TODO: Too large, we are uploading these datasets (HM3D is about 4T and Replica is about 90G) these days.
 
 <!-- ### RealEstate10K and ACID
 
@@ -124,6 +124,7 @@ model.encoder.wo_depth_refine=true
 We use the default model trained on HM3D to conduct cross-dataset evalutions. To evaluate them, *e.g.*, on Replica, run the following command
 
 ```bash
+output_dir="./outputs/splat360_log_depth_near0.1-100k/"
 # eval on Replica
 checkpoint_path="./checkpoints/hm3d.ckpt"
 CUDA_VISIBLE_DEVICES=0 python -m src.main \
