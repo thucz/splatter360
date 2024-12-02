@@ -1,0 +1,56 @@
+# @package _global_
+
+defaults:
+  - override /dataset: replica
+  - override /model/encoder: costvolume
+  - override /loss: [mse, lpips]
+
+wandb:
+  name: replica
+  tags: [replica, 256x256]
+
+data_loader:
+  train:
+    batch_size: 14
+
+trainer:
+  max_steps: 300_001
+
+# ----- Additional params for default best model customization
+model:
+  encoder:
+    num_depth_candidates: 128
+    costvolume_unet_feat_dim: 128
+    costvolume_unet_channel_mult: [1,1,1]
+    costvolume_unet_attn_res: [4]
+    gaussians_per_pixel: 1
+    depth_unet_feat_dim: 32
+    depth_unet_attn_res: [16]
+    depth_unet_channel_mult: [1,1,1,1,1]
+
+    wo_backbone_cross_attn: false
+    use_cross_view_self_attn: true
+
+# lpips loss
+loss:
+  lpips:
+    apply_after_step: 0
+    weight: 0.05
+
+dataset: 
+  image_shape: [512, 1024]
+  # roots: [datasets/re10k]
+  roots: [/wudang_vuc_3dc_afs/chenzheng/replica_dataset_pt]
+  rgb_roots: [ /wudang_vuc_3dc_afs/chenzheng/replica_dataset]  
+
+  near: 0.1
+  far: 10.0  
+  
+  # near: 1.
+  # far: 100.
+  baseline_scale_bounds: false
+  make_baseline_1: false
+
+test:
+  eval_time_skip_steps: 5
+  compute_scores: true
