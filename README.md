@@ -95,6 +95,30 @@ CUDA_VISIBLE_DEVICES=0 python -m src.main \
     test.compute_scores=false \
     test.eval_depth=true
 ```
+### Training
+
+```
+
+
+# download the backbone pretrained weight from unimath and save to 'checkpoints/'
+wget 'https://s3.eu-central-1.amazonaws.com/avg-projects/unimatch/pretrained/gmdepth-scale1-resumeflowthings-scannet-5d9d7964.pth' -P checkpoints
+
+# download the pretrained weight of depth-anything and save to 'pretrained/'
+wget https://huggingface.co/depth-anything/Depth-Anything-V2-Small/resolve/main/depth_anything_v2_vits.pth -P checkpoints
+
+
+# Our models are trained with 8 V100 (32GB) GPU.
+max_steps=100000
+output_dir="./outputs/splat360_log_depth_near0.1-100k/"
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -m src.main \
+     +experiment=hm3d data_loader.train.batch_size=1 \
+     model.encoder.shim_patch_size=8 \
+     model.encoder.downscale_factor=8 \
+     trainer.max_steps=$max_steps \
+     model.encoder.depth_sampling_type="log_depth" \
+     output_dir=$output_dir \
+     dataset.near=0.1
+```
 <!-- 
 ### Training
 
