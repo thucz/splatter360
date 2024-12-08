@@ -21,7 +21,12 @@ pip install -r requirements.txt
 ```
 
 ## Acquiring Datasets
-TODO: Too large, we are uploading these datasets (HM3D is about 4T and Replica is about 90G) these days.
+
+Replica: Download `replica_dataset.zip` and `replica_dataset_pt.zip` from [BaiduNetDisk](https://pan.baidu.com/s/1_GWfDn3XfNffZNvXoJUZ9Q?pwd=bair) and unzip them in the same directory.
+
+HM3D: Too large, we are uploading HM3D these days.
+
+
 
 <!-- ### RealEstate10K and ACID
 
