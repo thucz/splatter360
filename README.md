@@ -5,7 +5,7 @@ Official implementation of **Splatter-360: Generalizable 360 Gaussian Splatting 
 
 <!-- Authors: [Yuedong Chen](https://donydchen.github.io/), [Haofei Xu](https://haofeixu.github.io/), [Chuanxia Zheng](https://chuanxiaz.com/), [Bohan Zhuang](https://bohanzhuang.github.io/), [Marc Pollefeys](https://people.inf.ethz.ch/marc.pollefeys/), [Andreas Geiger](https://www.cvlibs.net/), [Tat-Jen Cham](https://personal.ntu.edu.sg/astjcham/) and [Jianfei Cai](https://jianfei-cai.github.io/). -->
 
-### [Project Page]() | [arXiv]() | [Pretrained Models](https://drive.google.com/file/d/1v3JVll12F9ReQ71bWLnz_ca9Xd2wEnhD/view?usp=drive_link) 
+### [Project Page](https://3d-aigc.github.io/Splatter-360/) | [arXiv]() | [Pretrained Models](https://drive.google.com/file/d/1v3JVll12F9ReQ71bWLnz_ca9Xd2wEnhD/view?usp=drive_link) 
 
 <!-- https://github.com/donydchen/mvsplat/assets/5866866/c5dc5de1-819e-462f-85a2-815e239d8ff2 -->
 
@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Acquiring Datasets
 
-Replica: Download `replica_dataset.zip` and `replica_dataset_pt.zip` from [BaiduNetDisk](https://pan.baidu.com/s/1_GWfDn3XfNffZNvXoJUZ9Q?pwd=bair) and unzip them in the same directory.
+Replica: Download `replica_dataset.zip` (rgb and depth files) and `replica_dataset_pt.zip` (scene indices) from [BaiduNetDisk](https://pan.baidu.com/s/1_GWfDn3XfNffZNvXoJUZ9Q?pwd=bair) and unzip them in the same directory. Revise `dataset.roots` and `dataset.rgb_roots` respectively in `config/experiment/replica.yaml` according to your storage directory.
 
 HM3D: Too large, we are uploading HM3D these days.
 
