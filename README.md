@@ -150,7 +150,7 @@ model.encoder.wo_depth_refine=true
 
 ### Cross-Dataset Generalization
 
-We use the default model trained on HM3D to conduct cross-dataset evalutions. To evaluate them, *e.g.*, on Replica, run the following command
+We use the default model trained on HM3D to conduct cross-dataset evaluations. To evaluate them, *e.g.*, on Replica, run the following command
 
 ```bash
 output_dir="./outputs/splat360_log_depth_near0.1-100k/"
