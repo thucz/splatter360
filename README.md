@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Acquiring Datasets
 
-Replica: Download `replica_dataset.zip` (rgb and depth files) and `replica_dataset_pt.zip` (scene indices) from [BaiduNetDisk](https://pan.baidu.com/s/1_GWfDn3XfNffZNvXoJUZ9Q?pwd=bair) and unzip them in the same directory. Revise `dataset.roots` and `dataset.rgb_roots` respectively in `config/experiment/replica.yaml` according to your storage directory.
+Replica: Download `replica_dataset.zip` (rgb and depth files) and `replica_dataset_pt.zip` (scene indices) from [BaiduNetDisk](https://pan.baidu.com/s/1_GWfDn3XfNffZNvXoJUZ9Q?pwd=bair) or [OneDrive](https://1drv.ms/f/c/3e01a23b343bc186/EpTo7XbTMNhAsJNAu7pxsS8BPtHjq8v0prpc6aXN6Hid4g?e=6W62sq) and unzip them in the same directory. Revise `dataset.roots` and `dataset.rgb_roots` respectively in `config/experiment/replica.yaml` according to your storage directory.
 
 HM3D: Too large, we are uploading HM3D these days.
 
