@@ -5,9 +5,27 @@ Official implementation of **Splatter-360: Generalizable 360 Gaussian Splatting 
 
 <!-- Authors: [Yuedong Chen](https://donydchen.github.io/), [Haofei Xu](https://haofeixu.github.io/), [Chuanxia Zheng](https://chuanxiaz.com/), [Bohan Zhuang](https://bohanzhuang.github.io/), [Marc Pollefeys](https://people.inf.ethz.ch/marc.pollefeys/), [Andreas Geiger](https://www.cvlibs.net/), [Tat-Jen Cham](https://personal.ntu.edu.sg/astjcham/) and [Jianfei Cai](https://jianfei-cai.github.io/). -->
 
-### [Project Page](https://3d-aigc.github.io/Splatter-360/) | [arXiv]() | [Pretrained Models](https://drive.google.com/file/d/1v3JVll12F9ReQ71bWLnz_ca9Xd2wEnhD/view?usp=drive_link) 
+### [Project Page](https://3d-aigc.github.io/Splatter-360/) | [arXiv](https://arxiv.org/abs/2412.06250) | [Pretrained Models](https://drive.google.com/file/d/1v3JVll12F9ReQ71bWLnz_ca9Xd2wEnhD/view?usp=drive_link) 
 
 <!-- https://github.com/donydchen/mvsplat/assets/5866866/c5dc5de1-819e-462f-85a2-815e239d8ff2 -->
+## News
+
+2024.12.15 we upload the preprocess code of HM3D and Replica dataset.
+
+
+
+## Citation
+If you find this repo useful, please give me a star.
+
+And if you use our code, please cite the following bibtex:
+```
+@article{chen2024splatter,
+  title={Splatter-360: Generalizable 360$\^{}$\{$$\backslash$circ$\}$ $ Gaussian Splatting for Wide-baseline Panoramic Images},
+  author={Chen, Zheng and Wu, Chenming and Shen, Zhelun and Zhao, Chen and Ye, Weicai and Feng, Haocheng and Ding, Errui and Zhang, Song-Hai},
+  journal={arXiv preprint arXiv:2412.06250},
+  year={2024}
+}
+```
 
 ## Installation
 
