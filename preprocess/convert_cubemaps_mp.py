@@ -134,10 +134,18 @@ def worker_func(cfg, stage, keys, num_worker, worker_index):
             n = c2ws.shape[0]
             config_hfov = 90
             cubemap_width, cubemap_height = 256, 256
-            width_center = cubemap_width / 2 - 0.5
-            height_center = cubemap_height / 2 - 0.5
+            
+            # old version has bugs:
+            # width_center = cubemap_width / 2 - 0.5
+            # height_center = cubemap_height / 2 - 0.5
+            # focal_len = (cubemap_height / 2) / np.tan(config_hfov * np.pi / 180.0 / 2)
+            # fxfycxcys = torch.tensor([width_center, height_center, focal_len, focal_len]).to(torch.float32)
+
+            width_center = cubemap_width / 2
+            height_center = cubemap_height / 2
             focal_len = (cubemap_height / 2) / np.tan(config_hfov * np.pi / 180.0 / 2)
-            fxfycxcys = torch.tensor([width_center, height_center, focal_len, focal_len]).to(torch.float32)
+            fxfycxcys = torch.tensor([focal_len, focal_len, width_center, height_center]).to(torch.float32)
+
             fxfycxcys = repeat(fxfycxcys, "r -> n r", n=n)
 
             c2ws_front = c2ws.clone()
