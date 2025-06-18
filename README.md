@@ -205,3 +205,5 @@ CUDA_VISIBLE_DEVICES=0 python -m src.main \
 ## Acknowledgements
 
 The project is largely based on [pixelSplat](https://github.com/dcharatan/pixelsplat), [MVSplat](https://github.com/donydchen/mvsplat), and [PanoGRF](https://github.com/thucz/PanoGRF) and has incorporated numerous code snippets from [UniMatch](https://github.com/autonomousvision/unimatch). Many thanks to these projects for their excellent contributions!
+
+Also check out Cheng's concurrent work [Pansplat](https://github.com/chengzhag/PanSplat) for more panorama synthesis methods
