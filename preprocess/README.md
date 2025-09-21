@@ -1,4 +1,4 @@
-
+T
 # Enviroment Setup
 ```
 conda create -n dataset360 python=3.7
@@ -67,6 +67,9 @@ revise `base_dir` to your paths of `dataset_generation.configs.options.py` respe
 
 # Generate dataset for HM3D:
 ```
+
+rm -rf preprocess/data_readers/scene_episodes/hm3d_train and preprocess/data_readers/scene_episodes/hm3d_test
+
 # revise args, e.g., root_dir to save the dataset.
 bash generate_hm3d_train.sh
 ```
